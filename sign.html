@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="sign.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!--Amazon Image Logo-->
+            <div class="d-flex flex-row justify-content-center">
+                <div class="row">
+                    <div class="col-md">
+                        <img class="img_1" src="./Amazon-Logo-PNG.png" alt="Amazon Logo" />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!--Form-->
+        <div class="d-flex flex-row justify-content-center">
+            <div class="row">
+                <div class="col-md">
+                    <form onsubmit="signin()">
+                        <div class="sign-in">Sign In</div>
+                        <div class="form-group">
+                            <label id="words_1" for="exampleInputEmail1">Email or mobile phone number</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                        <div class="form-group">
+                            <label id="words_2" for="exampleInputPassword1">Password &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Forgot your
+                                password? </label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                            <button type="button" class="btn btn-warning" id="sign-in" onclick="checkUser()">Sign
+                                In</button>
+                            <div class="form-group">
+                                <input type="checkbox" class="form-check-input checkbox" id="exampleCheck1">
+                                <label for="exampleCheck1" class="keep-sign-in">Keep me signed in.<a href="#">Details
+                                    </a>
+                                </label>
+                            </div>
+                        </div>
+                        <p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and
+                            our <a href="#">Privacy Policy</a>.</p>
+                        <hr>
+                        <button type="button" class="btn btn-warning" id="grey-button"><a href="./register.html"> Create
+                                your Amazon account</a></button>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center footer_1">
+        <div class="row">
+            <div class="col">
+                <p class="conditions"><a>Conditions of Use &nbsp &nbsp &nbsp </a> <a>Privacy Notice&nbsp &nbsp &nbsp
+                    </a> <a>Help&nbsp &nbsp &nbsp </a></p>
+                <p class="copyR">&copy; 1996-2023, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+    </div>
+<script src="sign.js"></script>
+</body>

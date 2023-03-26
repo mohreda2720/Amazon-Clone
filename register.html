@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="register.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="row">
+                    <div class="col-md">
+                        <img class="img_1" src="./Amazon-Logo-PNG.png" alt="Amazon Logo" />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="d-flex flex-row justify-content-center">
+            <div class="row">
+                <div class="col-md">
+                    <form method="GET" action="sign.html" role="form">
+                        <div class="form-group">
+
+                            <h3>Create account</h3>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="signupName">Your name</label>
+                            <input id="signupName" type="text" maxlength="50" class="form-control"
+                                onfocus="this.style.border='2px solid #f5d47a'"
+                                onblur="this.style.border='1px solid lightgrey'"  required>
+                        </div>
+                        <!-- <span style="color: red"></span> -->
+                        <div class="form-group">
+                            <label class="control-label" for="signupEmail">Mobile number or email
+                            </label>
+                            <input id="signupEmail" type="email" maxlength="50" class="form-control"
+                                onfocus="this.style.border='2px solid #f5d47a'"
+                                onblur="this.style.border='1px solid lightgrey'"  required>
+                        <!-- <span style="color: red"></span> -->
+                        
+                            </div>
+                        <div class="form-group">
+                            <label class="control-label" for="signupPassword">Password</label>
+                            <input id="signupPassword" type="password" maxlength="25" class="form-control"
+                                placeholder="at least 6 characters" length="40"
+                                onfocus="this.style.border='2px solid #f5d47a'"
+                                onblur="this.style.border='1px solid lightgrey'"  required>
+                        <!-- <span style="color: red"></span> -->
+                       
+                            </div>
+                        <div class="form-group">
+                            <label class="control-label" for="signupPasswordagain">Re-enter password</label>
+                            <input id="signupPasswordagain" type="password" maxlength="25" class="form-control"
+                                onfocus="this.style.border='2px solid #f5d47a'"
+                                onblur="this.style.border='1px solid lightgrey'"  required>
+                        </div>
+                        <div class="form-group">
+                            <button id="signupSubmit" type="submit" class="btn btn-info btn-block"
+                                onclick="registration(event)">Continue</button>
+                        </div>
+                        <p class="form-group" id="term">By creating an account, you agree to our <a href="#">Terms of
+                                Use</a> and
+                            our <a href="#">Privacy Policy</a>.</p>
+                        <hr>
+                        <p class="sign"> Already have an account? <a href="./sign.html">Sign in</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center footer_1">
+        <div class="row">
+            <div class="col">
+                <p class="conditions"><a>Conditions of Use &nbsp &nbsp &nbsp </a> <a>Privacy Notice&nbsp &nbsp &nbsp
+                    </a> <a>Help&nbsp &nbsp &nbsp </a></p>
+                <p class="copyR">&copy; 1996-2023, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+    </div>
+    <script src="register.js"></script>
+
+</body>
+
+</html>

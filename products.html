@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <script src="https://kit.fontawesome.com/e745e8231a.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0%;
+      padding: 0;
+      text-decoration: none;
+      box-sizing: border-box;
+      list-style: none;
+    }
+a {
+  color: white !important;
+  text-decoration: none !important;
+}
+    .first {
+      width: 100%;
+      height: 70px;
+      background-color: #131a22;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .first img {
+      width: 160px;
+      margin: 0 10px;
+      padding: 5px 10px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .first {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+    }
+
+    .flex span,
+    i {
+      color: white;
+    }
+
+    .logo {
+      flex: 0.18;
+      margin-right: 10px;
+      justify-content: space-between;
+    }
+
+    .map {
+      border: 1px solid transparent;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .map i {
+      margin-top: 17px;
+      padding-left: 5px;
+      font-size: 17px;
+    }
+
+    .map div {
+      padding: 5px;
+      display: flex;
+      cursor: pointer;
+      flex-direction: column;
+    }
+
+    .map div span:first-child {
+      font-weight: 400;
+      font-size: 13px;
+    }
+
+    .map div span {
+      font-weight: bold;
+    }
+
+    .right {
+      justify-content: space-between;
+      flex: 0.29;
+      margin-right: 10px;
+      align-items: center;
+    }
+
+    .input {
+      width: 100%;
+      background-color: white;
+      flex: 0.53;
+      display: flex;
+      margin: 0 10px;
+      align-items: center;
+      overflow: hidden;
+      justify-content: space-between;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+
+    .input input {
+      outline: none;
+      width: 80%;
+      font-size: 16px;
+      padding: 10px 2px;
+      border: none;
+    }
+
+    .input .fa-search {
+      color: rgb(51, 51, 51);
+      padding: 10px 15px;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #febd69;
+      border-radius: 0 5px 5px 0;
+      -webkit-border-radius: 0 5px 5px 0;
+      -moz-border-radius: 0 5px 5px 0;
+      -ms-border-radius: 0 5px 5px 0;
+      -o-border-radius: 0 5px 5px 0;
+    }
+
+    .input div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-right: 1px solid grey;
+      background-color: rgb(236, 234, 234);
+      padding: 6px 0;
+    }
+
+    .input div span {
+      color: rgb(51, 51, 51);
+      padding: 6px 5px;
+      font-size: 13px;
+      cursor: pointer;
+      border-radius: 5px 0 0 5px;
+      -webkit-border-radius: 5px 0 0 5px;
+      -moz-border-radius: 5px 0 0 5px;
+      -ms-border-radius: 5px 0 0 5px;
+      -o-border-radius: 5px 0 0 5px;
+    }
+
+    .input .fa-caret-down {
+      color: rgb(51, 51, 51);
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .lang i {
+      padding: 0;
+      margin: 0;
+      color: gray;
+    }
+
+    .lang {
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .right img {
+      width: 30px;
+      height: 30px;
+      padding: 4px;
+      margin: 0;
+      padding-top: 10px;
+      cursor: pointer;
+    }
+
+    .sign {
+      display: flex;
+      flex-direction: column;
+      padding: 3px 6px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .sign span:first-child {
+      font-weight: 400;
+      font-size: 13px;
+    }
+
+    .sign span {
+      display: inline-block;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    .flex .ac span {
+      font-size: 15px;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+
+    .fa-shopping-cart {
+      font-size: 30px;
+    }
+
+    .ca {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .cart {
+      align-items: flex-end;
+      position: relative;
+      padding: 5px 10px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .cart p {
+      position: absolute;
+      font-weight: bold;
+      content: #131a22;
+      top: 7px;
+      left: 23px;
+    }
+
+    .cart:hover {
+      border: 1px solid white;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .logo img:hover {
+      border: 1px solid white;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .map:hover {
+      border: 1px solid white;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .lang:hover {
+      border: 1px solid white;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .sign:hover {
+      border: 1px solid white;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .input .fa-search:hover {
+      background-color: #fdae46;
+    }
+
+    .input div:hover {
+      background-color: rgb(204, 202, 202);
+      color: black;
+    }
+
+    .second {
+      width: 100%;
+      height: 42%;
+      background-color: #232f3e;
+      display: flex;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .second ul {
+      align-items: center;
+      list-style: none;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 0;
+    }
+
+    .second span {
+      font-size: 15px;
+    }
+
+    .second-1 div i {
+      font-size: 20px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .second li {
+      padding: 5px 10px;
+      font-size: 15px;
+      margin: 7px 0;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .second-1 {
+      flex: 0.06;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .second-1 div {
+      display: flex;
+      align-items: center;
+      padding-left: 5px;
+    }
+
+    .second-2 {
+      display: flex;
+      flex: 0.74;
+      justify-content: flex-start;
+    }
+
+    .second-3 {
+      display: flex;
+      flex: 0.2;
+      justify-content: flex-end;
+      margin-right: 20px;
+      overflow: hidden;
+    }
+
+    .second-3 span {
+      padding: 5px 10px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+
+    .second-1 div span {
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .second-1 div:hover {
+      border: 1px solid white;
+    }
+
+    .second-2 li:hover {
+      border: 1px solid white;
+    }
+
+    .second-3 span:hover {
+      border: 1px solid white;
+    }
+
+    /*End Section 1 */
+
+    body {
+      background-color: black;
+    }
+
+    input {
+      background-color: transparent !important;
+    }
+
+    .item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .item figcaption {
+      --margin-val: 15px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, .7);
+      text-align: center;
+      transition: 1s all;
+      transform: translateY(100%);
+    }
+
+    .item:hover figcaption {
+
+      transform: translate(0);
+
+    }
+
+    figure img {
+      height: 350px;
+    }
+
+    #srch {
+      float: left !important;
+    }
+  </style>
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="first">
+      <div class="flex logo">
+        <a href="index.html"><img src="https://pnggrid.com/wp-content/uploads/2021/05/Amazon-Logo-Transparent-1024x310.png"
+            alt="" /></a>
+        <div class="map flex">
+          <i class="fas fa-map-marker"></i>
+          <div>
+            <span>Deliver to</span>
+            <span>Egypt</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex input">
+        <div>
+          <span>All</span>
+          <i class="fas fa-caret-down"></i>
+        </div>
+        <input type="text" id="srch" oninput="searchProducts(this.value)" placeholder="search..." />
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="flex right">
+        <div class="flex lang">
+          <img src="https://cdn.countryflags.com/thumbs/egypt/flag-800.png" alt="" />
+          <i class="fas fa-caret-down"></i>
+        </div>
+        <div class="sign">
+          <span>Hello, sign in</span>
+          <div class="flex ac">
+            <span>Account & Lists</span>
+            <i class="fas fa-caret-down"></i>
+          </div>
+        </div>
+        <div class="sign">
+          <span>Returns</span>
+          <span>& Orders</span>
+        </div>
+      </div>
+      <div class="flex cart">
+        <a href="cart.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="ca">Cart</span>
+          <p  id="cartAmount" class="cartAmount">0</p>
+        </a>
+      </div>
+    </div>
+    </div>
+    <div class="second">
+      <div class="second-1">
+        <div id="all">
+          <i class="fas fa-bars"></i>
+          <span>All</span>
+        </div>
+      </div>
+      <div class="second-2">
+        <ul>
+          <a href="products.html">
+            <li style="color: white;">Today's Deal</li>
+          </a>
+          <li>Customer Service</li>
+          <li>Registery</li>
+          <li>Gift Cards</li>
+          <li>Sell</li>
+        </ul>
+      </div>
+      <div class="second-3">
+        <span>Shop Valentime's Day</span>
+      </div>
+    </div>
+  </header>
+  <section class="container py-5">
+
+    <div class="pb-4 ">
+
+      <!-- <input type="text" id="srch" oninput="searchProducts(this.value)" placeholder="search..." class=" border-0 text-center form-control "> -->
+
+      <!-- <input type="text" id="getMovies" placeholder="get movies by word..." class="border-0 text-center form-control w-50"> -->
+    </div>
+
+    <div class="row g-4">
+
+
+
+
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="contain">
+        <div class="col">
+            <h1>Company</h1>
+            <ul>
+                <li>About</li>
+                <li>Mission</li>
+                <li>Services</li>
+                <li>Social</li>
+                <li>Get in touch</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Products</h1>
+            <ul>
+                <li>About</li>
+                <li>Mission</li>
+                <li>Services</li>
+                <li>Social</li>
+                <li>Get in touch</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Accounts</h1>
+            <ul>
+                <li>About</li>
+                <li>Mission</li>
+                <li>Services</li>
+                <li>Social</li>
+                <li>Get in touch</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Resources</h1>
+            <ul>
+                <li>Webmail</li>
+                <li>Redeem code</li>
+                <li>WHOIS lookup</li>
+                <li>Site map</li>
+                <li>Web templates</li>
+                <li>Email templates</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Support</h1>
+            <ul>
+                <li>Contact us</li>
+                <li>Web chat</li>
+                <li>Open ticket</li>
+            </ul>
+        </div>
+    </div>
+</div>
+  <script>
+    var result;
+    // get products 
+    async function getProducts() {
+      var response = await fetch(`http://islam1998-001-site1.itempurl.com/api/GetProducts`);
+      result = await response.json();
+      console.log(result);
+      display(result);
+    }
+    window.onload = function () {
+      getProducts();
+    }
+    function display(list) {
+
+      // console.log(result);
+      let cartona = ``;
+      for (var i = 0; i < list.length; i++) {
+        cartona += `<div class="col-md-4"  id="${i}" onclick="goDescription(${i})">
+        <figure class="item" >
+
+        <img src='http://eslam1998-001-site1.gtempurl.com/wwwroot/Images/${list[i].images2[0]}' class="w-100" alt="img">
+
+        <figcaption class="py-5 ">
+            <h4 class="title">${list[i].name}</h4>
+            <p class="para">${list[i].description}</p>
+            <p class="para">${list[i].price}</p>
+        </figcaption>
+
+    </figure>
+
+    </div>`
+
+
+      }
+      // the place to show the api information
+      document.querySelector('.row').innerHTML = cartona;
+    }
+
+    // (async function (){
+    //     await getProducts();
+
+    // })();
+
+    function searchProducts(searchTerm) {
+      var searchList = [];
+      console.log(result);
+      for (var i = 0; i < result.length; i++) {
+        if (result[i].name.toLowerCase().includes(searchTerm.toLowerCase()) == true) {
+          searchList.push(result[i]);
+        }
+      }
+      display(searchList);
+    }
+
+    function goDescription(i) {
+      
+      //Get product info
+      var productTitle = document.getElementById(i).getElementsByClassName("title")[0].innerHTML
+      var imageSrc = document.getElementById(i).getElementsByClassName("w-100")[0].src
+      var description = document.getElementById(i).getElementsByClassName("para")[0].innerHTML
+      var price = document.getElementById(i).getElementsByClassName("para")[1].innerHTML
+      console.log(productTitle)
+      console.log(imageSrc)
+      console.log(description)
+      console.log(price)
+
+      //Appending product info in description page
+      var newDescriptionWindow = window.open("description.html");
+      newDescriptionWindow.onload = function () {
+        newDescriptionWindow.document.querySelector("#productsTitle").innerHTML = `${productTitle}`;
+        newDescriptionWindow.document.querySelector("#price").innerHTML = `${price}`;
+        newDescriptionWindow.document.querySelector("#desc").innerHTML = `${description}`;
+        newDescriptionWindow.document.querySelector("#productImg").src = `${imageSrc}`;
+      }
+
+    }
+
+
+  </script>
+  <script src="./app.js"></script>
+  <script src="./cart.js"></script>
+</body>
+
+</html>

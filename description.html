@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/e745e8231a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        .small-container {
+            max-width: 1000px;
+            margin: auto;
+            margin-bottom: 120px;
+            padding-left: 25px;
+            padding-right: 20px;
+            display: flex;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .single-product {
+            margin-top: 80px;
+        }
+
+        .col-2 img {
+            max-width: 100%;
+            padding: 50px 0;
+            cursor: pointer;
+        }
+
+        .single-product .col-2 img {
+            padding: 0;
+        }
+
+        .single-product .col-2 {
+            padding: 20px;
+        }
+
+        .col-2 {
+            flex-basis: 50%;
+            min-width: 300px;
+        }
+
+        .col-2 h1 {
+            font-size: 50px;
+            line-height: 60px;
+            margin: 25px 0;
+        }
+
+        .single-product select {
+            display: block;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .single-product h4 {
+            margin: 20px 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .single-product .fa {
+            color: #ffd814;
+            margin-left: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .cart-btn {
+            cursor: pointer;
+            display: inline-block;
+            background-color: #ffd814;
+            color: rgb(43, 42, 42);
+            padding: 8px 30px;
+            margin: 30px 0;
+            border-radius: 30px;
+            transition: background 0.5s;
+        }
+
+        .cart-btn:hover {
+            background-color: rgb(255, 196, 0);
+        }
+
+        .footer {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            background-color: #232f3e;
+        }
+
+        .footer .col {
+            width: 190px;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            padding: 0px 20px 20px 20px;
+        }
+
+        .footer .col h1 {
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 20px 0px 5px 0px;
+            color: rgba(255, 255, 255, 0.2);
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.250em;
+        }
+
+        .footer .col ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer .col ul li {
+            color: #999999;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: bold;
+            padding: 5px 0px 5px 0px;
+            cursor: pointer;
+            transition: .2s;
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
+        }
+
+        .footer .col ul li:hover {
+            color: #ffffff;
+            transition: .1s;
+            -webkit-transition: .1s;
+            -moz-transition: .1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="sidebar active" id="top">
+        <div class="hdn-head">
+            <h2>Hello, Sign in</h2>
+        </div>
+        <div class="hdn-content">
+            <h3>Digital Content & Devices</h3>
+            <ul>
+                <div>
+                    <li>Amazon Music</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Kindle E-readers & Books</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Appstore for Android</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+            </ul>
+            <div class="line"></div>
+        </div>
+        <div class="hdn-content">
+            <h3>Shop By Department</h3>
+            <ul>
+                <div>
+                    <li>Electronics</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Computers</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Smart Homes</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Arts & Crafts</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+            </ul>
+            <div class="line"></div>
+        </div>
+        <div class="hdn-content">
+            <h3>Programs & Features</h3>
+            <ul>
+                <div>
+                    <li>Gift Cards</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Amazon Live</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>International Shopping</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>See All</li><i class="fa fa-solid fa-angle-right"></i>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <i class="bi bi-x asd d-none"></i>
+    <div class="triangle"></div>
+    <div class="hdn-sign">
+        <div class="hdn-table">
+            <div>
+                <h3>Your Lists</h3>
+                <ul>
+                    <li>Create a List</li>
+                </ul>
+            </div>
+            <div class="hdn-line"></div>
+            <div>
+                <h3>Your Account</h3>
+                <ul>
+                    <li>Account</li>
+                    <li>Orders</li>
+                    <li>Recommendations</li>
+                    <li>Browsing History</li>
+                    <li>Watchlists</li>
+                    <li>Video Purchases</li>
+                    <li>Kindle Unlimited</li>
+                    <li>Content & Devices</li>
+                    <li>Subscribe & Save items</li>
+                    <li>Membership</li>
+                    <li>Music Library</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="black"></div>
+    <header>
+        <div class="first">
+            <div class="flex logo">
+                <a href="index.html"><img
+                        src="https://pnggrid.com/wp-content/uploads/2021/05/Amazon-Logo-Transparent-1024x310.png"
+                        alt="" /></a>
+                <div class="map flex">
+                    <i class="fas fa-map-marker"></i>
+                    <div>
+                        <span>Deliver to</span>
+                        <span>Egypt</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex input">
+                <div>
+                    <span>All</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <input type="text" />
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="flex right">
+                <div class="flex lang">
+                    <img src="https://cdn.countryflags.com/thumbs/egypt/flag-800.png" alt="" />
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="sign">
+                    <span>Hello, sign in</span>
+                    <div class="flex ac">
+                        <span>Account & Lists</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="sign">
+                    <span>Returns</span>
+                    <span>& Orders</span>
+                </div>
+            </div>
+            <div class="flex cart">
+                <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="ca">Cart</span>
+                <p  id="cartAmount" class="cartAmount">0</p>
+                 </a>
+            </div>
+        </div>
+        </div>
+        <div class="second">
+            <div class="second-1">
+                <div id="all">
+                    <i class="fas fa-bars"></i>
+                    <span>All</span>
+                </div>
+            </div>
+            <div class="second-2">
+                <ul>
+                    <li>Today's Deal</li>
+                    <li>Customer Service</li>
+                    <li>Registery</li>
+                    <li>Gift Cards</li>
+                    <li>Sell</li>
+                </ul>
+            </div>
+            <div class="second-3">
+                <span>Shop Valentime's Day</span>
+            </div>
+        </div>
+    </header>
+
+<!-- <div id="des" class="small-container single-product"></div> -->
+    <!-- Description Body -->
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="" width="100%" id="productImg">
+            </div>
+        </div>
+        <div class="col-2">
+            <h1 id="productsTitle"></h1>
+            <h4>$Price:<span id="price"></span></h4>
+            <!-- <select>
+                <option>Select the Quantity </option>
+                <option>1 </option>
+                <option>2 </option>
+                <option>3 </option>
+            </select> -->
+            <span  class="cart-btn">Add to Cart</span>
+            <small style="display: none; color: red;">successful shopping</small>
+            <!-- <a href="" class="cart-btn">Add to Cart</a> -->
+            <h3>Product Details <i class="fa fa-indent"></i></h3>
+            <br>
+            <p id="desc">
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="contain">
+            <div class="col">
+                <h1>Company</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Mission</li>
+                    <li>Services</li>
+                    <li>Social</li>
+                    <li>Get in touch</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Products</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Mission</li>
+                    <li>Services</li>
+                    <li>Social</li>
+                    <li>Get in touch</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Accounts</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Mission</li>
+                    <li>Services</li>
+                    <li>Social</li>
+                    <li>Get in touch</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Resources</h1>
+                <ul>
+                    <li>Webmail</li>
+                    <li>Redeem code</li>
+                    <li>WHOIS lookup</li>
+                    <li>Site map</li>
+                    <li>Web templates</li>
+                    <li>Email templates</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Support</h1>
+                <ul>
+                    <li>Contact us</li>
+                    <li>Web chat</li>
+                    <li>Open ticket</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sidebar = document.querySelector(".sidebar");
+        const cross = document.querySelector(".asd");
+        const black = document.querySelector(".black");
+        const sidebtn = document.querySelector(".second-1");
+        const All = document.querySelector("#all");
+
+        cross.addEventListener("click", function () {
+
+            sidebar.classList.toggle("active")
+            // cross.classList.toggle("active")
+            black.classList.remove("active")
+
+            cross.classList.toggle("d-none")
+            document.body.classList.add("stop-scorll")
+        })
+
+
+        const sign = document.querySelector(".ac");
+        const trl = document.querySelector(".triangle");
+        const signin = document.querySelector(".hdn-sign");
+
+        sign.addEventListener("click", function () {
+            black.classList.toggle("active-1");
+            signin.classList.toggle("active");
+            trl.classList.toggle("active");
+            document.body.classList.add("stop-scorll")
+        })
+
+
+        All.addEventListener("click", function () {
+            black.classList.toggle("active")
+            sidebar.classList.remove("active")
+            cross.classList.toggle("d-none")
+            document.body.classList.remove("stop-scorll")
+
+        })
+
+        // function goDescription(i) {
+        //     var productTitle = document.getElementById(i).getElementsByClassName("title")[0].innerHTML
+        //     var imageSrc = document.getElementById(i).getElementsByClassName("w-100")[0].src
+        //     var description = document.getElementById(i).getElementsByClassName("para")[0].innerHTML
+        //     var price = document.getElementById(i).getElementsByClassName("para")[1].innerHTML
+        //     console.log(productTitle)
+        //     console.log(imageSrc)
+        //     console.log(description)
+        //     console.log(price)
+
+        //     var newDescriptionWindow = window.open("file:///C:/Users/moham/Desktop/Javascript%20project/description.html")
+        //     console.log(newDescriptionWindow.document.getElementById("#productsTitle"))
+
+
+        //     // newDescriptionWindow.document.querySelector(".productsTitle").innerHTML=productTitle
+        //     // newDescriptionWindow.document.querySelector(".productsTitle").innerHTML=productTitle
+
+       
+
+        // }
+    //     var des = document.getElementById("des")
+    //     des.innerHTML = `
+    //     <div class="row">
+    //         <div class="col-2">
+    //             <img src='http://eslam1998-001-site1.gtempurl.com/wwwroot/Images/${shopItemsData.images2[0]}' width="100%" id="productImg">
+    //         </div>
+    //     </div>
+    //     <div class="col-2">
+    //         <h1 id="productsTitle">${shopItemsData.price}</h1>
+    //         <h4>$Price:<span id="price">${shopItemsData.price}</span></h4>
+    //         <!-- <select>
+    //             <option>Select the Quantity </option>
+    //             <option>1 </option>
+    //             <option>2 </option>
+    //             <option>3 </option>
+    //         </select> -->
+    //         <span  class="cart-btn">Add to Cart</span>
+    //         <small style="display: none; color: red;">successful shopping</small>
+    //         <!-- <a href="" class="cart-btn">Add to Cart</a> -->
+    //         <h3>Product Details <i class="fa fa-indent"></i></h3>
+    //         <br>
+    //         <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid voluptas explicabo quis eum animi
+    //             numquam quae porro! Debitis minus officiis assumenda quaerat earum error libero, eius a possimus Lorem
+    //             ipsum dolor sit amet consectetur adipisicing elit. Eos odio veniam porro, explicabo, quasi sunt, dolor
+    //             et ab saepe voluptatum deleniti? Quis, possimus soluta officia aut iste praesentium ratione corporis.
+    //         </p>
+    //     </div>
+    //     `
+
+        var shopItemsData;
+  // get products 
+  let   shopItemsData1 = async () => {
+
+var response = await fetch(`http://islam1998-001-site1.itempurl.com/api/GetProducts`);
+shopItemsData = await response.json();
+console.log(shopItemsData);
+// display(result);
+
+}
+// window.onload = function () {
+shopItemsData1();
+
+// }
+
+        /**
+ * ! Basket to hold all the selected items
+ * ? the getItem part is retrieving data from the local storage
+ * ? if local storage is blank, basket becomes an empty array
+ */
+
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+
+var addToCart = document.querySelector(".cart-btn");
+// addToCart.addEventListener("click", increment(id))
+// let increment = (id) => {
+    var search;
+addToCart.onclick = () => {
+    let itmName = document.querySelector("#productsTitle").innerHTML
+  let selectedItem = shopItemsData.find((x) => x.name === itmName);
+  console.log(selectedItem.no)
+   search = basket.find((x) => x.id === selectedItem.no);
+  console.log(basket)
+  console.log(search)
+
+  if (search === undefined) {
+    basket.push({
+      id: selectedItem.no,
+      item: 1,
+    });
+document.querySelector("small").style.display= "inline";
+  } 
+//   else {
+//     search.item += 1;
+//   }
+
+  console.log(basket);
+  update(selectedItem.no);
+  localStorage.setItem("data", JSON.stringify(basket));
+};
+
+/**
+ * ! used to decrease the selected product item quantity by 1
+ */
+
+// let decrement = (id) => {
+//   let selectedItem = id;
+//   let search = basket.find((x) => x.id === selectedItem.id);
+
+//   if (search === undefined) return;
+//   else if (search.item === 0) return;
+//   else {
+//     search.item -= 1;
+//   }
+
+//   update(selectedItem.id);
+//   basket = basket.filter((x) => x.item !== 0);
+//   console.log(basket);
+//   localStorage.setItem("data", JSON.stringify(basket));
+// };
+
+/**
+ * ! To update the digits of picked items on each item card
+ */
+
+let update = (id) => {
+    let itmName = document.querySelector("#productsTitle").innerHTML
+  let selectedItem = shopItemsData.find((x) => x.name === itmName);
+  let search = basket.find((x) => x.id === selectedItem.no);
+  console.log(search)
+  /////dontknow
+  document.getElementById("cartAmount").innerHTML = search.item;
+//   document.getElementById(id).innerHTML = search.item;
+  calculation();
+};
+
+/**
+ * ! To calculate total amount of selected Items
+ */
+
+let calculation = () => {
+  let cartIcon = document.getElementById("cartAmount");
+  cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+};
+
+calculation();
+
+
+    </script>
+    <script src="./cart.js"></script>
+</body>
+
+</html>

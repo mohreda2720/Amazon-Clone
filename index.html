@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon</title>
+    <script src="https://kit.fontawesome.com/e745e8231a.js" crossorigin="anonymous"></script> 
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="sidebar active">
+      <div class="hdn-head">
+          <h2>Hello, Sign in</h2>
+      </div>
+      <div class="hdn-content">
+          <h3>Digital Content & Devices</h3>
+          <ul>
+              <div>
+                  <li>Amazon Music</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+              <div>
+                  <li>Kindle E-readers & Books</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+              <div>
+                  <li>Appstore for Android</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+          </ul>
+          <div class="line"></div>
+      </div>
+      <div class="hdn-content">
+          <h3>Shop By Department</h3>
+          <ul>
+              <div>
+                  <li>Electronics</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+              <div>
+                  <li>Computers</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+              <div>
+                  <li>Smart Homes</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+              <div>
+                  <li>Arts & Crafts</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+          </ul>
+          <div class="line"></div>
+      </div>
+      <div class="hdn-content">
+          <h3>Programs & Features</h3>
+          <ul>
+              <div>
+                  <li>Gift Cards</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+              <div>
+                  <li>Amazon Live</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+              <div>
+                  <li>International Shopping</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+              <div>
+                  <li>See All</li><i class="fa fa-solid fa-angle-right"></i>
+              </div>
+          </ul>
+      </div>
+  </div>  
+  <i class="bi bi-x asd d-none"></i>
+  <div class="triangle"></div>
+<div class="hdn-sign">
+    <div class="hdn-table">
+        <div>
+            <h3>Your Lists</h3>
+            <ul>
+                <li>Create a List</li>
+            </ul>
+        </div>
+        <div class="hdn-line"></div>
+        <div>
+            <h3>Your Account</h3>
+            <ul>
+                <li>Account</li>
+                <li>Orders</li>
+                <li>Recommendations</li>
+                <li>Browsing History</li>
+                <li>Watchlists</li>
+                <li>Video Purchases</li>
+                <li>Kindle Unlimited</li>
+                <li>Content & Devices</li>
+                <li>Subscribe & Save items</li>
+                <li>Membership</li>
+                <li>Music Library</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="black"></div>
+    <header>
+      <div class="first">
+        <div class="flex logo">
+          <a href="index.html"
+            ><img
+              src="https://pnggrid.com/wp-content/uploads/2021/05/Amazon-Logo-Transparent-1024x310.png"
+              alt=""
+          /></a>
+          <div class="map flex">
+            <i class="fas fa-map-marker"></i>
+            <div>
+              <span>Deliver to</span>
+              <span>Egypt</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex input">
+          <div>
+            <span>All</span>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <a href="products.html" style="width: 100%;"><input type="text" id="search" oninput="searchProducts(this.value)" placeholder="search..."  style="text-align: left; width: 100%;"/></a>
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="flex right">
+          <div class="flex lang">
+            <img
+              src="https://cdn.countryflags.com/thumbs/egypt/flag-800.png"
+              alt=""
+            />
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="sign">
+            <span>Hello, sign in</span>
+            <div class="flex ac">
+              <span>Account & Lists</span>
+              <i class="fas fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="sign">
+            <span>Returns</span>
+              <span>& Orders</span>
+            </div>
+          </div>
+          <div class="flex cart">
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="ca">Cart</span>
+              <p  id="cartAmount" class="cartAmount">0</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="second-1">
+          <div id="all">
+            <i class="fas fa-bars"></i>
+            <span>All</span>
+          </div>
+        </div>
+        <div class="second-2">
+          <ul>
+            <a href="products.html"><li style="color: white;">Today's Deal</li></a>
+            <li>Customer Service</li>
+            <li>Registery</li>
+            <li>Gift Cards</li>
+            <li>Sell</li>
+          </ul>
+        </div>
+        <div class="second-3">
+          <span>Shop Valentime's Day</span>
+        </div>
+      </div>
+    </header>
+
+<!-- section2 -->
+    <section class="sec-1">
+      <div class="container">
+        <div class="container-1">
+          <div class="product-comp">
+            <div class="box">
+              <h3>Gaming Accessories</h3>
+              <div class="box-a">
+                <div>
+                  <img src="Amazon Homepage Images/ga1.jpg" alt="">
+                  <span>Headset</span>
+                </div>
+                <div>
+                  <img src="Amazon Homepage Images/ga2.jpg" alt="">
+                  <span>Keyboards</span>
+                </div>
+                <div>
+                  <img src="Amazon Homepage Images/ga3.jpg" alt="">
+                  <span>Computer mice</span>
+                </div>
+                <div>
+                  <img src="Amazon Homepage Images/ga4.jpg" alt="">
+                  <span>Chairs</span>
+                </div>
+              </div>
+              <a href="#">See More</a>
+            </div>
+
+            <div class="box">
+              <h3>Shop by Category</h3>
+              <div class="box-a">
+                <div>
+                  <img src="Amazon Homepage Images/sc1.jpg" alt="">
+                  <span>Computer and Accessories</span>
+                </div>
+                <div>
+                  <img src="Amazon Homepage Images/sc2.jpg" alt="">
+                  <span>Video Games</span>
+                </div>
+                <div>
+                  <img src="Amazon Homepage Images/sc3.jpg" alt="">
+                  <span>Baby</span>
+                </div>
+                <div>
+                  <img src="Amazon Homepage Images/sc4.jpg" alt="">
+                  <span>Toys & Games</span>
+                </div>
+              </div>
+              <a href="#">Shop Now</a>
+            </div>
+
+
+            <div class="box box-c">
+              <h3>Amazon Basics</h3>
+              <div>
+                <img src="Amazon Homepage Images/amazon basics.jpg" alt="">
+              </div>
+              <a href="#">See More</a>
+            </div>
+
+            <div class="box-b">
+              <div class="best">
+                <h1>Sign in for the best Experience</h1>
+                <button><a href="sign.html">Sign in Securely</a></button>
+              </div>
+
+            <div>
+              <img src="Amazon Homepage Images/banner.jpg" alt="">
+            </div>
+            </div>
+          </div>
+
+          <div class="product-comp">
+            <div class="box box-c">
+              <h3>Shop Valentine's day</h3>
+              <div>
+                <img src="Amazon Homepage Images/shop valentine's.jpg" alt="">
+              </div>
+              <a href="#">See More</a>
+            </div>
+
+            <div class="box box-c">
+              <h3>Electronics</h3>
+              <div>
+                <img src="Amazon Homepage Images/electronics.jpg" alt="">
+              </div>
+              <a href="#">Shop Now</a>
+            </div>
+
+            <div class="box box-c">
+              <h3>Find your ideal TV</h3>
+              <div>
+                <img src="Amazon Homepage Images/find your deal.jpg" alt="">
+              </div>
+              <a href="#">See More</a>
+            </div>
+
+            <div class="box box-c">
+              <h3>Easy Returns</h3>
+              <div>
+                <img src="Amazon Homepage Images/easy return.jpg" alt="">
+              </div>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider">
+          <div class="image-box">
+            <div class="slide">
+              <img src="61W-QJozfgL._SX3000_.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="71tIrZqybrL._SX3000_.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="61TD5JLGhIL._SX3000_.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="61jovjd+f9L._SX3000_.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="61DUO0NqyyL._SX3000_.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="71qid7QFWJL._SX3000_.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn"><i class="fa-solid fa-chevron-right"></i></div>
+        <h3>Popular Products in Wirelessly Internationally</h3>
+        <ul class="product-slide">
+          <li><img src="Amazon Homepage Images/pinter1.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter2.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter3.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter4.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter5.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter6.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter7.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter8.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter9.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter10.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter11.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter12.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter13.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter14.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pinter15.jpg" alt=""></li>
+        </ul>
+      </div>
+    </section>
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn btn-1b"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn btn-1a"><i class="fa-solid fa-chevron-right"></i></div>
+        <h3>Popular Products in Wirelessly Internationally</h3>
+        <ul class="product-slide product-slide-1">
+          <li><img src="Amazon Homepage Images/pc7.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc8.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc9.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc10.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc11.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc12.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc13.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc14.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc15.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc16.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc1.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc2.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc3.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc4.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/pc5.jpg" alt=""></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="product-comp">
+      <div class="box box-c">
+        <h3>Shop activity trackers and smartwatches</h3>
+        <div>
+          <img style="width: 270px; height: 200px;" src="Amazon Homepage Images/sm1.jpg" alt="">
+        </div>
+        <a href="#">See More</a>
+      </div>
+
+      <div class="box box-d">
+        <h3>Comfy styles for men</h3>
+        <div class="box-a">
+          <div>
+            <img src="Amazon Homepage Images/cm1.jpg" alt="">
+            <span>Sweetshirts</span>
+          </div>
+          <div>
+            <img src="Amazon Homepage Images/cm2.jpg" alt="">
+            <span>Joggers</span>
+          </div>
+          <div>
+            <img src="Amazon Homepage Images/cm3.jpg" alt="">
+            <span>Cardigans</span>
+          </div>
+          <div>
+            <img src="Amazon Homepage Images/cm4.jpg" alt="">
+            <span>Easy tees</span>
+          </div>
+        </div>
+        <a href="#">See more</a>
+      </div>
+
+
+      <div class="box box-d">
+        <h3>Gaming merchandise</h3>
+        <div class="box-a">
+          <div>
+            <img src="Amazon Homepage Images/gm1.jpg" alt="">
+            <span>Apparel</span>
+          </div>
+          <div>
+            <img src="Amazon Homepage Images/gm2.jpg" alt="">
+            <span>Hats</span>
+          </div>
+          <div>
+            <img src="Amazon Homepage Images/gm3.jpg" alt="">
+            <span>Action Figures</span>
+          </div>
+          <div>
+            <img src="Amazon Homepage Images/gm4.jpg" alt="">
+            <span>Mugs</span>
+          </div>
+        </div>
+        <a href="#">See more</a>
+      </div>
+
+      <div class="box box-c">
+        <h3>Shop Pet Supplies</h3>
+        <div>
+          <img src="Amazon Homepage Images/pets.jpg" alt="">
+        </div>
+        <a href="#">See More</a>
+      </div>
+
+    </div>
+
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn btn-2b"><i class="fa fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn btn-2a"><i class="fa fa-solid fa-chevron-right"></i></div>
+        <h3>Popular Products in Wirelessly Internationally</h3>
+        <ul class="product-slide product-slide-2">
+          <li><img src="Amazon Homepage Images/lm1.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm2.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm16.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm4.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm5.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm6.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm7.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm8.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm9.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm10.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm11.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm17.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm13.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm14.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/lm15.jpg" alt=""></li>
+        </ul>
+      </div>
+    </section>
+    <div class="product-comp">
+      <div class="box box-c">
+        <h3>For your fitness needs</h3>
+        <div>
+          <img src="Amazon Homepage Images/fitness.jpg" alt="">
+        </div>
+        <a href="#">Shop Now</a>
+      </div>
+      <div class="box box-c">
+        <h3>Create with strip lights</h3>
+        <div>
+          <img src="Amazon Homepage Images/light.jpg" alt="">
+        </div>
+        <a href="#">Shop Now</a>
+      </div>
+      <div class="box box-c">
+        <h3>New arrivals in Toys</h3>
+        <div>
+          <img src="Amazon Homepage Images/craft.jpg" alt="">
+        </div>
+        <a href="#">Shop Now</a>
+      </div>
+      <div class="box box-c">
+        <h3>Kindle E readers</h3>
+        <div>
+          <img src="Amazon Homepage Images/reader.jpg" alt="">
+        </div>
+        <a href="#">Shop Now</a>
+      </div>
+    </div>
+
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn btn-3b"><i class="fa fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn btn-3a"><i class="fa fa-solid fa-chevron-right"></i></div>
+        <h3>Top Sellers in Books for you</h3>
+        <ul class="product-slide product-slide-3">
+          <li><img src="Amazon Homepage Images/b1.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b2.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b3.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b4.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b5.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b6.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b7.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b8.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b9.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b10.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b11.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b12.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b13.jpg" alt=""></li>
+          <li><img src="Amazon Homepage Images/b14.jpg" alt=""></li>
+        </ul>
+      </div>
+    </section>
+
+      <!-- Footer -->
+  <div class="footer">
+    <div class="contain">
+        <div class="col">
+            <h1>Company</h1>
+            <ul>
+                <li>About</li>
+                <li>Mission</li>
+                <li>Services</li>
+                <li>Social</li>
+                <li>Get in touch</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Products</h1>
+            <ul>
+                <li>About</li>
+                <li>Mission</li>
+                <li>Services</li>
+                <li>Social</li>
+                <li>Get in touch</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Accounts</h1>
+            <ul>
+                <li>About</li>
+                <li>Mission</li>
+                <li>Services</li>
+                <li>Social</li>
+                <li>Get in touch</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Resources</h1>
+            <ul>
+                <li>Webmail</li>
+                <li>Redeem code</li>
+                <li>WHOIS lookup</li>
+                <li>Site map</li>
+                <li>Web templates</li>
+                <li>Email templates</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Support</h1>
+            <ul>
+                <li>Contact us</li>
+                <li>Web chat</li>
+                <li>Open ticket</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="app.js"></script>
+    <script src="./cart.js"></script>
+  </body>
+</html>
